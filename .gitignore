@@ -127,3 +127,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+#make sure people don't commit their data
+*.csv
+*.xls
+*.xlsx
+
