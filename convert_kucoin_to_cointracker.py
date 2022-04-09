@@ -16,13 +16,14 @@ def convert_kucoin_to_cointracker(df):
     
     # Split the buy into two columns with correct position e.g. BTC received currency and USDT sent currency
     buys[['Received Currency', 'Sent Currency']] = buys['symbol'].str.split('-', expand=True)
-    # buys
+    # buys and sells have different directions
     buys[['Received Quantity']] = buys[['amount']]
     buys[['Sent Quantity']] = buys[['funds']]
 
     
     # Split the sell into two columns with correct position e.g. USDT received currency and BTC sent currency
     sells[['Sent Currency', 'Received Currency']] = sells['symbol'].str.split('-', expand=True)
+    # buys and sells have different directions - hence the split reversal above - we have to match
     sells[['Received Quantity']] = sells[['funds']]
     sells[['Sent Quantity']] = sells[['amount']]
 
@@ -59,7 +60,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description=f'Kucoin BigData export CSV to Cointracker compatible CSV file')
     # Positional
-    parser.add_argument('-f', '--file', type=str, metavar='', help="Location of the Kucoin Margin CSV file")
+    parser.add_argument('-f', '--file', type=str, metavar='', help="Location of the Kucoin BigData CSV file")
     parser.add_argument('-o', '--output', type=str, default='./cointracker.csv', metavar='',help="Location to output the Cointracker compatible CSV file")
     args = parser.parse_args()
     main(args)
