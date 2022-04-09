@@ -22,7 +22,7 @@ Date, Received Quantity, Received Currency, Sent Quantity, Sent Currency, Fee Am
 
 ```bash
 pip3 install -r requirements
-python3 -f kucoin.csv - 2021-kucoin.csv
+python3 kucoin_to_cointracker.py -f kucoin.csv - 2021-kucoin.csv
 ```
 
 
