@@ -2,6 +2,8 @@
 
 this assumes you have a CSV export of trades from kucoin bigdata with these headers
 
+ie:
+
 ```
 kucoin.csv
 ```
@@ -14,7 +16,7 @@ user_id, trade_id, symbol, order_type, deal_price, amount, direction, funds, fee
 and want to convert it to this cointracker accepted format
 
 ```csv
-Date, Received Quantity,	Received Currency,	Sent Quantity,	Sent Currency,	Fee Amount,	Fee Currency														```					
+Date, Received Quantity, Received Currency, Sent Quantity, Sent Currency, Fee Amount, Fee Currency																	```	
 
 
 ```bash
