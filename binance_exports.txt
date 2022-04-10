@@ -1,0 +1,26 @@
+
+Spot Trading Order History (filled and cancelled orders) https://www.binance.com/en/my/orders/exchange/tradeorder
+
+Trade History(filled orders) https://www.binance.com/en/my/orders/exchange/usertrade
+
+Margin Trading Order History (filled and cancelled orders) https://www.binance.com/en/my/orders/margin/tradeorder
+
+Trade History https://www.binance.com/en/my/orders/margin/usertrade
+
+Futures Trading Trade History https://www.binance.com/en/my/orders/futures/tradehistory
+
+Transaction History https://www.binance.com/en/my/orders/futures/transactionhistory
+
+Convert and OTC Portal Convert History https://www.binance.com/en/my/orders/convert/history
+
+Small Balance Assets Conversion to BNB https://www.binance.com/en/my/wallet/history/bnbconvert
+
+Buy Crypto History (Buy, Recurring Buy, Sell, Binance Access) https://www.binance.com/en/my/wallet/exchange/buysell-history
+
+Deposit Crypto https://www.binance.com/en/my/wallet/history/deposit-crypto
+
+Withdraw Crypto https://www.binance.com/en/my/wallet/history/withdraw-crypto
+
+Deposit Fiat https://www.binance.com/en/my/wallet/history/deposit-fiat
+
+Withdraw Fiat https://www.binance.com/en/my/wallet/history/withdraw-fiat
