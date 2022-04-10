@@ -66,3 +66,6 @@ python3 binance.py -f binance.csv -o cointracker_binance.csv
 this script comes with absolutely no warranty, use at your own risk
 
 make sure to verify your results before uploading to cointracker
+
+![about](https://user-images.githubusercontent.com/129784/162638677-b7012065-3828-465c-a1d2-978e54f352cc.jpg)
+
