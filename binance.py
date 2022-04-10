@@ -2,6 +2,7 @@ import pandas as pd
 import argparse
 import re
 import sys
+from datetime import datetime
 
 def load_binance_file(file):
     try:
@@ -50,9 +51,14 @@ def convert_binance_to_cointracker(df):
     combined_df['Fee Currency'] = combined_df['Fee'].str.extract('([a-zA-Z ]+)', expand=False)
     combined_df['Fee Amount'] = combined_df['Fee'].str.extract('(^\d*\.?\d+)', expand=False)
 
+    # fix date time stamps
+
+    #combined_df[['fixed_data']] = combined_df[['Date(UTC)']]
+
+    combined_df['Coin Tracker Date'] = pd.to_datetime(combined_df['Date(UTC)']).dt.strftime('%m/%d/%Y %H:%M:%S')
 
     # # Filter on only the columns Cointracker cares about
-    combined_df = combined_df[['Date(UTC)', 'Received Quantity', 'Received Currency', 'Sent Quantity', 'Sent Currency', 'Fee Amount', 'Fee Currency']]
+    combined_df = combined_df[['Coin Tracker Date', 'Received Quantity', 'Received Currency', 'Sent Quantity', 'Sent Currency', 'Fee Amount', 'Fee Currency']]
 
     # # Change the column names to what Cointracker expects
     combined_df.columns = ['Date', 'Received Quantity', 'Received Currency', 'Sent Quantity', 'Sent Currency', 'Fee Amount', 'Fee Currency']
