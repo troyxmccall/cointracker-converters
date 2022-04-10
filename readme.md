@@ -1,4 +1,4 @@
-###
+### Kucoin
 
 this assumes you have a CSV export of trades from kucoin bigdata with these EXACT headers
 
@@ -11,7 +11,7 @@ user_id, trade_id, symbol, order_type, deal_price, amount, direction, funds, fee
 
 and want to convert it to this cointracker accepted format
 
-name: `cointracker.csv`
+name: `cointracker_kucoin.csv`
 
 ```ini
 Date, Received Quantity, Received Currency, Sent Quantity, Sent Currency, Fee Amount, Fee Currency
@@ -19,13 +19,33 @@ Date, Received Quantity, Received Currency, Sent Quantity, Sent Currency, Fee Am
 
 
 ```bash
-rm cointracker.csv 
+rm cointracker_kucoin.csv
 pip3 install -r requirements
-python3 convert_kucoin_to_cointracker.py -f kucoin.csv -o cointracker.csv
+python3 convert_kucoin_to_cointracker.py -f kucoin.csv -o cointracker_kucoin.csv
 ```
 
-this script comes with exactly no warranty, use at your own risk
+
+
+
+### Binance
+
+this assumes you have a CSV export of trades from binance [https://www.binance.com/en/my/orders/exchange/usertrade] with these EXACT headers
+
+
+```csv
+"Date(UTC)","Pair","Side","Price","Executed","Amount","Fee"
+```
+
+
+```bash
+rm cointracker.csv
+pip3 install -r requirements
+python3 convert_kucoin_to_cointracker.py -f kucoin.csv -o cointracker_kucoin.csv
+```
+
+
+### disclaimer
+
+this script comes with absolutely no warranty, use at your own risk
 
 make sure to verify your results before uploading to cointracker
-
-
