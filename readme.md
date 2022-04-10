@@ -17,6 +17,7 @@ name: `cointracker_kucoin.csv`
 Date, Received Quantity, Received Currency, Sent Quantity, Sent Currency, Fee Amount, Fee Currency
 ```	
 
+#### kucoin usage
 
 ```bash
 rm cointracker_kucoin.csv
@@ -38,8 +39,16 @@ name: `binance.csv`
 "Date(UTC)","Pair","Side","Price","Executed","Amount","Fee"
 ```
 
+and want to convert it to this cointracker accepted format
 
-#### usage
+name: `cointracker_binance.csv`
+
+```ini
+Date, Received Quantity, Received Currency, Sent Quantity, Sent Currency, Fee Amount, Fee Currency
+```
+
+
+##### binance  usage
 
 ```bash
 rm cointracker_binance.csv
@@ -48,13 +57,7 @@ python3 binance.py -f binance.csv -o cointracker_binance.csv
 ```
 
 
-and want to convert it to this cointracker accepted format
 
-name: `cointracker_binance.csv`
-
-```ini
-Date, Received Quantity, Received Currency, Sent Quantity, Sent Currency, Fee Amount, Fee Currency
-```
 
 
 
